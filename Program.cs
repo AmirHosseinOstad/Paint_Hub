@@ -1,6 +1,7 @@
 ﻿using System.Drawing;
 using System.Drawing.Imaging;
 using System.Net;
+using System.Runtime;
 using System.Security.AccessControl;
 using System.Text.Json;
 using System.Xml.Linq;
@@ -40,34 +41,34 @@ for (; ; )
 
         Console.WriteLine("Get repo information...");
 
-        var RepoInfo = GetRepoInfo(RepoAddress);
+        var listInfo = GetRepoInfo(RepoAddress);
 
-        if (RepoInfo[0] == "0" && RepoInfo[1] == "0")
+        if (!String.IsNullOrEmpty(listInfo.ErrorMessage))
         {
             Console.ForegroundColor= ConsoleColor.Red;
             Console.WriteLine("Error : ");
-            Console.WriteLine(RepoInfo[2]);
+            Console.WriteLine(listInfo.ErrorMessage);
         }
         else
         {
             Console.WriteLine("Data processing and card making...");
 
-            string ImageAvatar = SaveImage(RepoInfo[3], "Avatar.png");
+            string ImageAvatar = SaveImage(listInfo.AvatarUrl, "Avatar.png");
             using (Bitmap card = CardGenerator.CreateCard(
                 ImageAvatar,
-                RepoInfo[0],
-                RepoInfo[2],
-                RepoInfo[1],
-                Convert.ToInt32(RepoInfo[4]),
-                Convert.ToInt32(RepoInfo[5]),
-                Convert.ToInt32(RepoInfo[6]),
-                RepoInfo[7]))
+                listInfo.Name,
+                listInfo.OwnerName,
+                listInfo.Description,
+                listInfo.Stars,
+                listInfo.Forks,
+                listInfo.Issues,
+                listInfo.Language))
             {
                 Console.WriteLine("Start image creation...");
-                card.Save($"Card-{RepoInfo[0]}.png", ImageFormat.Png);
+                card.Save($"Card-{listInfo.Name}.png", ImageFormat.Png);
 
                 Console.WriteLine("The card image was saved at the following address:");
-                Console.WriteLine(ImageAvatar.Replace("Avatar.png", $"Card-{RepoInfo[0]}.png"));
+                Console.WriteLine(ImageAvatar.Replace("Avatar.png", $"Card-{listInfo.Name}.png"));
             }
         }
     }
@@ -80,13 +81,13 @@ for (; ; )
 
         Console.WriteLine("Get repo information...");
 
-        var RepoInfo = GetRepoInfo(RepoAddress);
+        var listInfo = GetRepoInfo(RepoAddress);
 
-        if (RepoInfo[0] == "0" && RepoInfo[1] == "0")
+        if (!String.IsNullOrEmpty(listInfo.ErrorMessage))
         {
             Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine("Error : ");
-            Console.WriteLine(RepoInfo[2]);
+            Console.WriteLine(listInfo.ErrorMessage);
         }
         else
         {
@@ -116,16 +117,16 @@ for (; ; )
 
             Console.WriteLine("Data processing and card making...");
 
-            string ImageAvatar = SaveImage(RepoInfo[3], "Avatar.png");
+            string ImageAvatar = SaveImage(listInfo.AvatarUrl, "Avatar.png");
             using (Bitmap card = CardGenerator.CreateCard(
-                ImageAvatar,
-                RepoInfo[0],
-                RepoInfo[2],
-                RepoInfo[1],
-                Convert.ToInt32(RepoInfo[4]),
-                Convert.ToInt32(RepoInfo[5]),
-                Convert.ToInt32(RepoInfo[6]),
-                RepoInfo[7],
+            ImageAvatar,
+            listInfo.Name,
+                listInfo.OwnerName,
+                listInfo.Description,
+                listInfo.Stars,
+                listInfo.Forks,
+                listInfo.Issues,
+                listInfo.Language,
                 ColorTranslator.FromHtml("#" + TitleColor),
                 ColorTranslator.FromHtml("#" + OwnerColor),
                 ColorTranslator.FromHtml("#" + DescriptionColor),
@@ -133,10 +134,10 @@ for (; ; )
                 ColorTranslator.FromHtml("#" + ImageAvatar)))
             {
                 Console.WriteLine("Start image creation...");
-                card.Save($"Card-{RepoInfo[0]}.png", ImageFormat.Png);
+                card.Save($"Card-{listInfo.Name}.png", ImageFormat.Png);
 
                 Console.WriteLine("The card image was saved at the following address:");
-                Console.WriteLine(ImageAvatar.Replace("Avatar.png", $"Card-{RepoInfo[0]}.png"));
+                Console.WriteLine(ImageAvatar.Replace("Avatar.png", $"Card-{listInfo.Name}.png"));
             }
         }
     }
@@ -150,7 +151,7 @@ for (; ; )
 
 }
 
-string[] GetRepoInfo(string url)
+ListCard GetRepoInfo(string url)
 {
     using (HttpClient client = new HttpClient())
     {
@@ -184,12 +185,30 @@ string[] GetRepoInfo(string url)
                     description = description.Substring(0, 50) + " ...";
                 }
 
-                return new string[] { name, description, ownerName, avatarUrl, stars.ToString(), forks.ToString(), issues.ToString(), language };
+
+                ListCard listCard = new ListCard()
+                {
+                    Name = name,
+                    Description = description,
+                    Language = language,
+                    Stars = stars,
+                    Forks = forks,
+                    Issues = issues,
+                    OwnerName = ownerName,
+                    AvatarUrl = avatarUrl
+                };
+
+                return listCard;
             }
         }
         catch (Exception ex)
         {
-            return (new string[] { "0", "0", ex.Message });
+            ListCard listCard = new ListCard()
+            {
+                ErrorMessage = ex.Message,
+            };
+
+            return listCard;
         }
     }
 }
@@ -206,4 +225,17 @@ string SaveImage(string imageUrl, string fileName)
 
         return savePath;
     }
+}
+
+class ListCard
+{
+    public string Name {  get; set; }
+    public string Description { get; set; }
+    public string Language { get; set; }
+    public int Stars { get; set; }
+    public int Forks { get; set; }
+    public int Issues { get; set; }
+    public string OwnerName { get; set; }
+    public string AvatarUrl { get; set; }
+    public string? ErrorMessage { get; set; }
 }

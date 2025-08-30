@@ -67,7 +67,7 @@ public class CardGenerator
             Font defaultSubjectFont = new Font("Arial", 36, FontStyle.Regular);
             Font defaultInformationFont = new Font("Arial", 28, FontStyle.Regular);
             Font statsFont = new Font("Arial", 18, FontStyle.Regular);
-            Font badgeFont = new Font("Arial", 20, FontStyle.Regular); // فونت برای متن badge
+            Font badgeFont = new Font("Arial", 36, FontStyle.Regular); // فونت برای متن badge
 
             // رنگ‌های پیش‌فرض
             Color finalTitleColor = titleColor ?? Color.Black;
