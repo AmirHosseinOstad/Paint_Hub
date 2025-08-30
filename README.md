@@ -1,63 +1,21 @@
-# PaintHub
+# PaintHub  
 
-🎨 **GitHub Repository Social Media Banner Generator**
-## آخرین بروزرسانی:
-- بهبود طراحی بنر
-- افزودن برچسب زبان برنامه‌نویسی
-- افزودن آیکون
-  
-یک ابزار کنسولی برای ساخت بنر زیبا از ریپوزیتوری‌های گیت‌هاب که می‌توانند در شبکه‌های اجتماعی استفاده شوند.
+🎨 **GitHub Repository Social Media Banner Generator**  
 
-## ✨ امکانات
+## Latest Update:
+- Improved banner design  
+- Added programming language label  
+- Added icon  
 
-- **حالت خودکار**: ساخت بنر با رنگ‌های پیش‌فرض
-- **حالت دستی**: انتخاب رنگ‌های دلخواه برای تمام عناصر
-- **دانلود خودکار آواتار**: دریافت و ذخیره تصویر پروفایل
-- **نمایش آمار**: ستاره‌ها، فورک‌ها و issues
+A console tool for generating beautiful banners from GitHub repositories that can be used on social media.  
 
-## 🚀 نحوه استفاده
+## ✨ Features
 
-### حالت خودکار
-```
->>> a
-Enter the GitHub repository address : https://github.com/username/repository
-```
+- **Automatic Mode**: Generate banners with default colors  
+- **Manual Mode**: Choose custom colors for all elements  
+- **Auto Avatar Download**: Fetch and store the profile picture  
+- **Stats Display**: Stars, forks, and issues  
 
-### حالت دستی  
-```
->>> m
-Enter the GitHub repository address : https://github.com/username/repository
-Enter the background color code (#ffff) : #ffffff
-Enter the title color code (#ffff) : #2c3e50
-Enter the owner name color code (#ffff) : #3498db
-Enter the description color code (#ffff) : #7f8c8d
-Enter the status color code (#ffff) : #e74c3c
-```
+## 🚀 Usage
 
-## 📋 پیش‌نیازها
-
-- .NET 6.0 یا بالاتر
-- اتصال به اینترنت (برای دریافت اطلاعات از GitHub API)
-
-## 🎯 خروجی
-
-فایل PNG با نام `Card-[نام-ریپو].png` در پوشه پروژه ذخیره می‌شود.
-
-## 🔧 نصب و اجرا
-
-1. کد را کلون کنید
-2. پروژه را بیلد کنید: `dotnet build`  
-3. اجرا کنید: `dotnet run`
-
-## 📝 نکات
-
-- آدرس ریپو باید کامل باشد (شامل https://)
-- پایان آدرس ریپو با .git نباشد. (خطای 404)
-- توضیحات بلند خودکار کوتاه می‌شوند (حداکثر 50 کاراکتر)
-- کدهای رنگ باید در فرمت هگز باشند (بدون #)
-
-## نمونه بنر ساخته شده با PointHub
-<img width="1280" height="640" alt="Card-Point_Hub" src="https://github.com/user-attachments/assets/02540710-1b93-4fcd-8cca-cf36d10917a9" />
-
----
-*ساخته شده با ❤️ برای جامعه GitHub*
+### Automatic Mode
