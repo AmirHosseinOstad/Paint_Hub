@@ -140,6 +140,13 @@ for (; ; )
             }
         }
     }
+    else if (KeyChar == 'h')
+    {
+        Console.ForegroundColor = ConsoleColor.White;
+
+        string TextHelp = File.ReadAllText("Help.txt");
+        Console.WriteLine(TextHelp);
+    }
 
 }
 

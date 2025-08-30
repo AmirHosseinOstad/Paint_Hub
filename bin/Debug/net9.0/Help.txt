@@ -1,0 +1,7 @@
+How to create a banner for your repo?
+
+First, if you want to proceed manually (bored!) press the 'm' key. Otherwise, press the 'a' key for automatic mode.
+Then enter the requested information and wait for the requested banner to be created.
+
+GitHub address:
+https://github.com/AmirHosseinOstad/Paint_Hub
