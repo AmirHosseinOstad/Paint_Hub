@@ -52,5 +52,9 @@ Enter the status color code (#ffff) : #e74c3c
 - توضیحات بلند خودکار کوتاه می‌شوند (حداکثر 50 کاراکتر)
 - کدهای رنگ باید در فرمت هگز باشند (بدون #)
 
+## نمونه بنر ساخته شده با PointHub
+<img width="1280" height="640" alt="Card-Point_Hub" src="https://github.com/user-attachments/assets/02540710-1b93-4fcd-8cca-cf36d10917a9" />
+
+ساخته شده با ❤️ برای جامعه GitHub
 ---
 *ساخته شده با ❤️ برای جامعه GitHub*
