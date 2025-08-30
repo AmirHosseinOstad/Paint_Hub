@@ -19,23 +19,21 @@ A console tool for generating beautiful banners from GitHub repositories that ca
 ## 🚀 Usage
 
 ### Automatic Mode
-a
+```
+>>> a
 Enter the GitHub repository address : https://github.com/username/repository
-
-shell
-Copy code
+```
 
 ### Manual Mode
-m
+```
+>>> m
 Enter the GitHub repository address : https://github.com/username/repository
 Enter the background color code (#ffff) : #ffffff
 Enter the title color code (#ffff) : #2c3e50
 Enter the owner name color code (#ffff) : #3498db
 Enter the description color code (#ffff) : #7f8c8d
 Enter the status color code (#ffff) : #e74c3c
-
-markdown
-Copy code
+```
 
 ## 📋 Prerequisites
 
