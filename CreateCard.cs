@@ -8,7 +8,7 @@ using System.IO;
 
 public class CardGenerator
 {
-    private const int CardWidth = 1280;
+    private const int CardWidth = 1280; 
     private const int CardHeight = 640;
     private const int ImageSize = 200;
     private const int ImageMarg = 80;
