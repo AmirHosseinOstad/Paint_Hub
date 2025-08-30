@@ -18,3 +18,4 @@ D:\My World\Elesoft\Paint_Hub\Paint_Hub\obj\Debug\net9.0\refint\Paint_Hub.dll
 D:\My World\Elesoft\Paint_Hub\Paint_Hub\obj\Debug\net9.0\Paint_Hub.pdb
 D:\My World\Elesoft\Paint_Hub\Paint_Hub\obj\Debug\net9.0\Paint_Hub.genruntimeconfig.cache
 D:\My World\Elesoft\Paint_Hub\Paint_Hub\obj\Debug\net9.0\ref\Paint_Hub.dll
+D:\My World\Elesoft\Paint_Hub\Paint_Hub\obj\Debug\net9.0\Paint_Hub.sourcelink.json

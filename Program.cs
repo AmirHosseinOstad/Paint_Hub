@@ -60,7 +60,8 @@ for (; ; )
                 RepoInfo[1],
                 Convert.ToInt32(RepoInfo[4]),
                 Convert.ToInt32(RepoInfo[5]),
-                Convert.ToInt32(RepoInfo[6])))
+                Convert.ToInt32(RepoInfo[6]),
+                RepoInfo[7]))
             {
                 Console.WriteLine("Start image creation...");
                 card.Save($"Card-{RepoInfo[0]}.png", ImageFormat.Png);
@@ -124,6 +125,7 @@ for (; ; )
                 Convert.ToInt32(RepoInfo[4]),
                 Convert.ToInt32(RepoInfo[5]),
                 Convert.ToInt32(RepoInfo[6]),
+                RepoInfo[7],
                 ColorTranslator.FromHtml("#" + TitleColor),
                 ColorTranslator.FromHtml("#" + OwnerColor),
                 ColorTranslator.FromHtml("#" + DescriptionColor),
@@ -161,6 +163,7 @@ string[] GetRepoInfo(string url)
 
                 string name = root.GetProperty("name").GetString();
                 string description = root.GetProperty("description").GetString();
+                string language = root.GetProperty("language").GetString();
                 int stars = root.GetProperty("stargazers_count").GetInt32();
                 int forks = root.GetProperty("forks_count").GetInt32();
                 int issues = root.GetProperty("open_issues_count").GetInt32();
@@ -174,7 +177,7 @@ string[] GetRepoInfo(string url)
                     description = description.Substring(0, 50) + " ...";
                 }
 
-                return new string[] { name, description, ownerName, avatarUrl, stars.ToString(), forks.ToString(), issues.ToString() };
+                return new string[] { name, description, ownerName, avatarUrl, stars.ToString(), forks.ToString(), issues.ToString(), language };
             }
         }
         catch (Exception ex)
