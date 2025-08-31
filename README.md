@@ -1,6 +1,9 @@
 # PaintHub  
 
 🎨 **GitHub Repository Social Media Banner Generator**  
+## Use without clone
+The PaintHub is online as an asp.net core mvc (Web_Version branch) on the host and can be used from https://painthub.elesoft.ir/
+On the web page, you can create a banner for your GitHub repo with a graphical interface.
 
 ## Latest Update:
 - Improved banner design  
