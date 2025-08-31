@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\build\Paint_Hub_web.props" />
-</Project>
