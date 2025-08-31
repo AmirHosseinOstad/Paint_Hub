@@ -1,0 +1,115 @@
+﻿    <a href="index.html" class="back-btn">← بازگشت</a>
+
+    <div class="container">
+        <div class="header">
+            <div class="logo">🎨</div>
+            <h1>حالت دستی</h1>
+            <p class="subtitle">انتخاب رنگ‌های دلخواه شما</p>
+        </div>
+
+    <form id="manualForm" action="/Home/Manual" method="post">
+            <div class="form-section">
+                <div class="form-group">
+                    <label for="repoUrl">آدرس مخزن GitHub:</label>
+                    <input type="text"
+                           id="repoUrl"
+                           name="repoUrl"
+                           placeholder="https://github.com/username/repository"
+                           required>
+                    <div class="example">مثال: https://github.com/microsoft/vscode</div>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <div class="section-title">🎨 تنظیمات رنگ</div>
+
+                <div class="form-group">
+                    <label for="bgColor">رنگ پس‌زمینه:</label>
+                    <div class="color-input-group">
+					<input type="text" name="bgColor" id="bgColorText" value="#ffffff" placeholder="#ffffff">
+                        <input type="color" id="bgColor" value="#ffffff">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="titleColor">رنگ عنوان:</label>
+                    <div class="color-input-group">
+					<input type="text" name="titleColor" id="titleColorText" value="#2c3e50" placeholder="#2c3e50">
+                        <input type="color" id="titleColor" value="#2c3e50">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="ownerColor">رنگ نام مالک:</label>
+                    <div class="color-input-group">
+					<input type="text" name="ownerColor" id="ownerColorText" value="#3498db" placeholder="#3498db">
+                        <input type="color" id="ownerColor" value="#3498db">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="descColor">رنگ توضیحات:</label>
+                    <div class="color-input-group">
+					<input type="text" name="descColor" id="descColorText" value="#7f8c8d" placeholder="#7f8c8d">
+                        <input type="color" id="descColor" value="#7f8c8d">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="statColor">رنگ آمارها:</label>
+                    <div class="color-input-group">
+                    <input type="text" name="statColor" id="statColorText" value="#e74c3c" placeholder="#e74c3c">
+                        <input type="color" id="statColor" value="#e74c3c">
+                    </div>
+                </div>
+            </div>
+
+            <button type="submit" class="generate-btn">
+                🎨 ایجاد بنر سفارشی
+            </button>
+        </form>
+    </div>
+
+    <script>
+        // همگام‌سازی color picker با text input
+        function setupColorSync(colorId, textId) {
+            const colorInput = document.getElementById(colorId);
+            const textInput = document.getElementById(textId);
+
+            colorInput.addEventListener('change', function() {
+                textInput.value = this.value;
+            });
+
+            textInput.addEventListener('input', function() {
+                // بررسی فرمت صحیح کد هکس
+                if (this.value.match(/^#[0-9A-Fa-f]{6}$/)) {
+                    colorInput.value = this.value;
+                }
+            });
+        }
+
+        // تنظیم همگام‌سازی برای همه رنگ‌ها
+        setupColorSync('bgColor', 'bgColorText');
+        setupColorSync('titleColor', 'titleColorText');
+        setupColorSync('ownerColor', 'ownerColorText');
+        setupColorSync('descColor', 'descColorText');
+        setupColorSync('statColor', 'statColorText');
+
+        document.getElementById('manualForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const repoUrl = document.getElementById('repoUrl').value.trim();
+
+            if (!repoUrl) {
+                alert('لطفاً آدرس مخزن را وارد کنید');
+                return;
+            }
+
+            if (!repoUrl.includes('github.com')) {
+                alert('آدرس وارد شده معتبر نیست');
+                return;
+            }
+
+        this.submit();
+        });
+    </script>
