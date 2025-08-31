@@ -131,7 +131,7 @@ for (; ; )
                 ColorTranslator.FromHtml("#" + OwnerColor),
                 ColorTranslator.FromHtml("#" + DescriptionColor),
                 ColorTranslator.FromHtml("#" + BackgColor),
-                ColorTranslator.FromHtml("#" + ImageAvatar)))
+                ColorTranslator.FromHtml("#" + StatusColor)))
             {
                 Console.WriteLine("Start image creation...");
                 card.Save($"Card-{listInfo.Name}.png", ImageFormat.Png);

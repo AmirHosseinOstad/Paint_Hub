@@ -17,11 +17,11 @@ public class CardGenerator
 
     public static Bitmap CreateCard(string imagePath, string title, string subject, string information,
                                   int stars, int forks, int issues,
-                                  string badgeText, Color? badgeTextColor = null,
+                                  string badgeText,
                                   Color? titleColor = null, Color? subjectColor = null, Color? informationColor = null,
                                   Color? backgColor = null, Color? statColor = null)
     {
-        badgeTextColor = backgColor;
+        Color badgeTextColor = backgColor ?? Color.White;
         Bitmap bitmap = new Bitmap(CardWidth, CardHeight);
 
         using (Graphics graphics = Graphics.FromImage(bitmap))
@@ -74,7 +74,7 @@ public class CardGenerator
             Color finalSubjectColor = subjectColor ?? Color.FromArgb(88, 88, 88);
             Color finalInformationColor = informationColor ?? Color.FromArgb(128, 128, 128);
             Color finalStatColor = statColor ?? Color.Black;
-            Color finalBadgeTextColor = badgeTextColor ?? Color.White;
+            Color finalBadgeTextColor = badgeTextColor;
 
             // رسم متن‌ها با فاصله‌گذاری مناسب برای تصویر بزرگ‌تر
             float currentY = 110;
