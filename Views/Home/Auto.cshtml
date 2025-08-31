@@ -1,0 +1,29 @@
+﻿<a href="index.html" class="back-btn">← بازگشت</a>
+
+<div class="container">
+    <div class="header">
+        <div class="logo">🤖</div>
+        <h1>حالت خودکار</h1>
+        <p class="subtitle">تولید سریع با تنظیمات پیش‌فرض</p>
+    </div>
+
+    <form id="autoForm" action="/Home/Auto" method="post">
+        <div class="form-group">
+            <label for="repoUrl">آدرس مخزن GitHub:</label>
+            <input type="text"
+                   id="repoUrl"
+                   name="repoUrl"
+                   placeholder="https://github.com/username/repository"
+                   required>
+            <div class="example">مثال: https://github.com/microsoft/vscode</div>
+        </div>
+
+        <button type="submit" class="generate-btn">
+            🎨 ایجاد بنر
+        </button>
+
+        <div class="info-box">
+            <strong>نکته:</strong> در حالت خودکار، رنگ‌های پیش‌فرض استفاده شده و فرآیند سریع‌تر انجام می‌شود.
+        </div>
+    </form>
+</div>

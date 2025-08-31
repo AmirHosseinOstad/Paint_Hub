@@ -20,6 +20,7 @@ Properties/PublishProfiles/
 *.user
 *.userosscache
 *.sln.docstates
+*.png
 
 ## Visual Studio
 .vs/
