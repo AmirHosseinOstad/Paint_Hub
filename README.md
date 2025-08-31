@@ -59,6 +59,7 @@ A PNG file named `Card-[repo-name].png` will be saved in the project folder.
 
 ## Example Banner Generated with PaintHub
 <img width="1280" height="640" alt="Card-monaco-editor" src="https://github.com/user-attachments/assets/e36a6646-9c1b-42c5-a908-2fcd7ee8fecb" />
+<img width="1280" height="640" alt="Card-monaco-editor" src="https://github.com/user-attachments/assets/f65513d7-f126-46a9-ac38-072c9421b69a" />
 
 ---
 *Built with ❤️ for the GitHub community*  
