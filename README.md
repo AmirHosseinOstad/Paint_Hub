@@ -57,7 +57,7 @@ A PNG file named `Card-[repo-name].png` will be saved in the project folder.
 - Long descriptions are automatically shortened (maximum 50 characters)  
 - Color codes must be in HEX format (without #)  
 
-## Example Banner Generated with PointHub
+## Example Banner Generated with PaintHub
 <img width="1280" height="640" alt="Card-monaco-editor" src="https://github.com/user-attachments/assets/e36a6646-9c1b-42c5-a908-2fcd7ee8fecb" />
 
 ---
