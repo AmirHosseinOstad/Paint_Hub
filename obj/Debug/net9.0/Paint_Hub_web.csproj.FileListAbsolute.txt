@@ -95,10 +95,11 @@ D:\My World\Elesoft\Paint_Hub_web\Paint_Hub_web\obj\Debug\net9.0\Paint_Hub_web.p
 D:\My World\Elesoft\Paint_Hub_web\Paint_Hub_web\obj\Debug\net9.0\Paint_Hub_web.genruntimeconfig.cache
 D:\My World\Elesoft\Paint_Hub_web\Paint_Hub_web\obj\Debug\net9.0\ref\Paint_Hub_web.dll
 D:\My World\Elesoft\Paint_Hub_web\Paint_Hub_web\obj\Debug\net9.0\compressed\v9bt2d5cow-fhafr20641.gz
-D:\My World\Elesoft\Paint_Hub_web\Paint_Hub_web\obj\Debug\net9.0\compressed\ytqb9jaum8-okpagnqmjd.gz
 D:\My World\Elesoft\Paint_Hub_web\Paint_Hub_web\bin\Debug\net9.0\Microsoft.Win32.SystemEvents.dll
 D:\My World\Elesoft\Paint_Hub_web\Paint_Hub_web\bin\Debug\net9.0\System.Drawing.Common.dll
 D:\My World\Elesoft\Paint_Hub_web\Paint_Hub_web\bin\Debug\net9.0\System.Private.Windows.Core.dll
 D:\My World\Elesoft\Paint_Hub_web\Paint_Hub_web\bin\Debug\net9.0\runtimes\win\lib\net9.0\Microsoft.Win32.SystemEvents.dll
 D:\My World\Elesoft\Paint_Hub_web\Paint_Hub_web\obj\Debug\net9.0\Paint_Hub_web.csproj.AssemblyReference.cache
 D:\My World\Elesoft\Paint_Hub_web\Paint_Hub_web\obj\Debug\net9.0\Paint_Hu.FCA4B019.Up2Date
+D:\My World\Elesoft\Paint_Hub_web\Paint_Hub_web\obj\Debug\net9.0\Paint_Hub_web.sourcelink.json
+D:\My World\Elesoft\Paint_Hub_web\Paint_Hub_web\obj\Debug\net9.0\compressed\ytqb9jaum8-ovrnnpxjyf.gz

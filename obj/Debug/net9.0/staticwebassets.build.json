@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "UO7zaq7cvkZQg/9nCdMKXri1eTEIakFoLAyKNDGvJv0=",
+  "Hash": "owAbCanyAWbi7JlD95ZO5K0b5Ak9fNyxmRqZxCEYr+c=",
   "Source": "Paint_Hub_web",
   "BasePath": "_content/Paint_Hub_web",
   "Mode": "Default",
@@ -1340,12 +1340,12 @@
       "OriginalItemSpec": "D:\\My World\\Elesoft\\Paint_Hub_web\\Paint_Hub_web\\wwwroot\\favicon.ico"
     },
     {
-      "Identity": "D:\\My World\\Elesoft\\Paint_Hub_web\\Paint_Hub_web\\obj\\Debug\\net9.0\\compressed\\ytqb9jaum8-okpagnqmjd.gz",
+      "Identity": "D:\\My World\\Elesoft\\Paint_Hub_web\\Paint_Hub_web\\obj\\Debug\\net9.0\\compressed\\ytqb9jaum8-ovrnnpxjyf.gz",
       "SourceId": "Paint_Hub_web",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\My World\\Elesoft\\Paint_Hub_web\\Paint_Hub_web\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "_content/Paint_Hub_web",
-      "RelativePath": "css/site#[.{fingerprint=okpagnqmjd}]?.css.gz",
+      "RelativePath": "css/site#[.{fingerprint=ovrnnpxjyf}]?.css.gz",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Alternative",
@@ -1354,8 +1354,8 @@
       "RelatedAsset": "D:\\My World\\Elesoft\\Paint_Hub_web\\Paint_Hub_web\\wwwroot\\css\\site.css",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "mckpo6o7xt",
-      "Integrity": "RmPbKkeM3+MC1QRszXbeuauuxgu7kQsot6Fm2SYb/VA=",
+      "Fingerprint": "hjx6zqbn80",
+      "Integrity": "s/Vfj0yAGgmOkqV3gfJMpvi+qvs9C5t/kam+5kBB9JA=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "D:\\My World\\Elesoft\\Paint_Hub_web\\Paint_Hub_web\\wwwroot\\css\\site.css"
@@ -1438,8 +1438,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "okpagnqmjd",
-      "Integrity": "+ItOjYdKAkltRTVKTvEuNDFdUgFtSyJKt6WkyQLxUso=",
+      "Fingerprint": "ovrnnpxjyf",
+      "Integrity": "5De2RSJiAM0+lysDBaZJ/hESifxC42tbtpFZ2lINyww=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
@@ -1464,6 +1464,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "D:\\My World\\Elesoft\\Paint_Hub_web\\Paint_Hub_web\\wwwroot\\ImagesResult\\Card-6bb8634cd46d491788dc67f8b741a93f.png",
+      "SourceId": "Paint_Hub_web",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\My World\\Elesoft\\Paint_Hub_web\\Paint_Hub_web\\wwwroot\\",
+      "BasePath": "_content/Paint_Hub_web",
+      "RelativePath": "ImagesResult/Card-6bb8634cd46d491788dc67f8b741a93f#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "i8yzmhdmpz",
+      "Integrity": "7l2bVCnzFuHrcSGDenujmNj8pR3BukZo92c8wOTvi+4=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\ImagesResult\\Card-6bb8634cd46d491788dc67f8b741a93f.png"
     },
     {
       "Identity": "D:\\My World\\Elesoft\\Paint_Hub_web\\Paint_Hub_web\\wwwroot\\js\\site.js",
@@ -2832,12 +2853,12 @@
     },
     {
       "Route": "css/site.css",
-      "AssetFile": "D:\\My World\\Elesoft\\Paint_Hub_web\\Paint_Hub_web\\obj\\Debug\\net9.0\\compressed\\ytqb9jaum8-okpagnqmjd.gz",
+      "AssetFile": "D:\\My World\\Elesoft\\Paint_Hub_web\\Paint_Hub_web\\obj\\Debug\\net9.0\\compressed\\ytqb9jaum8-ovrnnpxjyf.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000447427293"
+          "Quality": "0.000391236307"
         }
       ],
       "ResponseHeaders": [
@@ -2847,15 +2868,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2234"
+          "Value": "2555"
         },
         {
           "Name": "ETag",
-          "Value": "\"RmPbKkeM3+MC1QRszXbeuauuxgu7kQsot6Fm2SYb/VA=\""
+          "Value": "\"s/Vfj0yAGgmOkqV3gfJMpvi+qvs9C5t/kam+5kBB9JA=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 31 Aug 2025 09:34:46 GMT"
+          "Value": "Sun, 31 Aug 2025 11:08:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2875,13 +2896,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"+ItOjYdKAkltRTVKTvEuNDFdUgFtSyJKt6WkyQLxUso=\""
+          "Value": "W/\"5De2RSJiAM0+lysDBaZJ/hESifxC42tbtpFZ2lINyww=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-+ItOjYdKAkltRTVKTvEuNDFdUgFtSyJKt6WkyQLxUso="
+          "Value": "sha256-5De2RSJiAM0+lysDBaZJ/hESifxC42tbtpFZ2lINyww="
         }
       ]
     },
@@ -2896,7 +2917,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "14008"
+          "Value": "10570"
         },
         {
           "Name": "Content-Type",
@@ -2904,11 +2925,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"+ItOjYdKAkltRTVKTvEuNDFdUgFtSyJKt6WkyQLxUso=\""
+          "Value": "\"5De2RSJiAM0+lysDBaZJ/hESifxC42tbtpFZ2lINyww=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 31 Aug 2025 09:34:46 GMT"
+          "Value": "Sun, 31 Aug 2025 11:08:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2918,13 +2939,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-+ItOjYdKAkltRTVKTvEuNDFdUgFtSyJKt6WkyQLxUso="
+          "Value": "sha256-5De2RSJiAM0+lysDBaZJ/hESifxC42tbtpFZ2lINyww="
         }
       ]
     },
     {
       "Route": "css/site.css.gz",
-      "AssetFile": "D:\\My World\\Elesoft\\Paint_Hub_web\\Paint_Hub_web\\obj\\Debug\\net9.0\\compressed\\ytqb9jaum8-okpagnqmjd.gz",
+      "AssetFile": "D:\\My World\\Elesoft\\Paint_Hub_web\\Paint_Hub_web\\obj\\Debug\\net9.0\\compressed\\ytqb9jaum8-ovrnnpxjyf.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2933,7 +2954,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2234"
+          "Value": "2555"
         },
         {
           "Name": "Content-Type",
@@ -2941,11 +2962,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"RmPbKkeM3+MC1QRszXbeuauuxgu7kQsot6Fm2SYb/VA=\""
+          "Value": "\"s/Vfj0yAGgmOkqV3gfJMpvi+qvs9C5t/kam+5kBB9JA=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 31 Aug 2025 09:34:46 GMT"
+          "Value": "Sun, 31 Aug 2025 11:08:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2963,18 +2984,18 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-RmPbKkeM3+MC1QRszXbeuauuxgu7kQsot6Fm2SYb/VA="
+          "Value": "sha256-s/Vfj0yAGgmOkqV3gfJMpvi+qvs9C5t/kam+5kBB9JA="
         }
       ]
     },
     {
-      "Route": "css/site.okpagnqmjd.css",
-      "AssetFile": "D:\\My World\\Elesoft\\Paint_Hub_web\\Paint_Hub_web\\obj\\Debug\\net9.0\\compressed\\ytqb9jaum8-okpagnqmjd.gz",
+      "Route": "css/site.ovrnnpxjyf.css",
+      "AssetFile": "D:\\My World\\Elesoft\\Paint_Hub_web\\Paint_Hub_web\\obj\\Debug\\net9.0\\compressed\\ytqb9jaum8-ovrnnpxjyf.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000447427293"
+          "Quality": "0.000391236307"
         }
       ],
       "ResponseHeaders": [
@@ -2984,15 +3005,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2234"
+          "Value": "2555"
         },
         {
           "Name": "ETag",
-          "Value": "\"RmPbKkeM3+MC1QRszXbeuauuxgu7kQsot6Fm2SYb/VA=\""
+          "Value": "\"s/Vfj0yAGgmOkqV3gfJMpvi+qvs9C5t/kam+5kBB9JA=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 31 Aug 2025 09:34:46 GMT"
+          "Value": "Sun, 31 Aug 2025 11:08:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3012,13 +3033,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"+ItOjYdKAkltRTVKTvEuNDFdUgFtSyJKt6WkyQLxUso=\""
+          "Value": "W/\"5De2RSJiAM0+lysDBaZJ/hESifxC42tbtpFZ2lINyww=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "okpagnqmjd"
+          "Value": "ovrnnpxjyf"
         },
         {
           "Name": "label",
@@ -3026,12 +3047,12 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-+ItOjYdKAkltRTVKTvEuNDFdUgFtSyJKt6WkyQLxUso="
+          "Value": "sha256-5De2RSJiAM0+lysDBaZJ/hESifxC42tbtpFZ2lINyww="
         }
       ]
     },
     {
-      "Route": "css/site.okpagnqmjd.css",
+      "Route": "css/site.ovrnnpxjyf.css",
       "AssetFile": "D:\\My World\\Elesoft\\Paint_Hub_web\\Paint_Hub_web\\wwwroot\\css\\site.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -3041,7 +3062,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "14008"
+          "Value": "10570"
         },
         {
           "Name": "Content-Type",
@@ -3049,11 +3070,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"+ItOjYdKAkltRTVKTvEuNDFdUgFtSyJKt6WkyQLxUso=\""
+          "Value": "\"5De2RSJiAM0+lysDBaZJ/hESifxC42tbtpFZ2lINyww=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 31 Aug 2025 09:34:46 GMT"
+          "Value": "Sun, 31 Aug 2025 11:08:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3063,7 +3084,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "okpagnqmjd"
+          "Value": "ovrnnpxjyf"
         },
         {
           "Name": "label",
@@ -3071,13 +3092,13 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-+ItOjYdKAkltRTVKTvEuNDFdUgFtSyJKt6WkyQLxUso="
+          "Value": "sha256-5De2RSJiAM0+lysDBaZJ/hESifxC42tbtpFZ2lINyww="
         }
       ]
     },
     {
-      "Route": "css/site.okpagnqmjd.css.gz",
-      "AssetFile": "D:\\My World\\Elesoft\\Paint_Hub_web\\Paint_Hub_web\\obj\\Debug\\net9.0\\compressed\\ytqb9jaum8-okpagnqmjd.gz",
+      "Route": "css/site.ovrnnpxjyf.css.gz",
+      "AssetFile": "D:\\My World\\Elesoft\\Paint_Hub_web\\Paint_Hub_web\\obj\\Debug\\net9.0\\compressed\\ytqb9jaum8-ovrnnpxjyf.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3086,7 +3107,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2234"
+          "Value": "2555"
         },
         {
           "Name": "Content-Type",
@@ -3094,11 +3115,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"RmPbKkeM3+MC1QRszXbeuauuxgu7kQsot6Fm2SYb/VA=\""
+          "Value": "\"s/Vfj0yAGgmOkqV3gfJMpvi+qvs9C5t/kam+5kBB9JA=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 31 Aug 2025 09:34:46 GMT"
+          "Value": "Sun, 31 Aug 2025 11:08:44 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3116,7 +3137,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "okpagnqmjd"
+          "Value": "ovrnnpxjyf"
         },
         {
           "Name": "label",
@@ -3124,7 +3145,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-RmPbKkeM3+MC1QRszXbeuauuxgu7kQsot6Fm2SYb/VA="
+          "Value": "sha256-s/Vfj0yAGgmOkqV3gfJMpvi+qvs9C5t/kam+5kBB9JA="
         }
       ]
     },
@@ -3423,6 +3444,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-jcY0RXFOlcp4VNTCcYQtWVZZBlr+ZY+AOv6/0S5dnF8="
+        }
+      ]
+    },
+    {
+      "Route": "ImagesResult/Card-6bb8634cd46d491788dc67f8b741a93f.i8yzmhdmpz.png",
+      "AssetFile": "D:\\My World\\Elesoft\\Paint_Hub_web\\Paint_Hub_web\\wwwroot\\ImagesResult\\Card-6bb8634cd46d491788dc67f8b741a93f.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "153867"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"7l2bVCnzFuHrcSGDenujmNj8pR3BukZo92c8wOTvi+4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 31 Aug 2025 10:33:08 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "i8yzmhdmpz"
+        },
+        {
+          "Name": "label",
+          "Value": "ImagesResult/Card-6bb8634cd46d491788dc67f8b741a93f.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-7l2bVCnzFuHrcSGDenujmNj8pR3BukZo92c8wOTvi+4="
+        }
+      ]
+    },
+    {
+      "Route": "ImagesResult/Card-6bb8634cd46d491788dc67f8b741a93f.png",
+      "AssetFile": "D:\\My World\\Elesoft\\Paint_Hub_web\\Paint_Hub_web\\wwwroot\\ImagesResult\\Card-6bb8634cd46d491788dc67f8b741a93f.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "153867"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"7l2bVCnzFuHrcSGDenujmNj8pR3BukZo92c8wOTvi+4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 31 Aug 2025 10:33:08 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-7l2bVCnzFuHrcSGDenujmNj8pR3BukZo92c8wOTvi+4="
         }
       ]
     },
