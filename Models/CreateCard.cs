@@ -2,12 +2,15 @@
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Drawing.Imaging;
+using System.Drawing.Text;
 using System.IO;
 
 #pragma warning disable
 
 public class CardGenerator
 {
+
+
     private const int CardWidth = 1280;
     private const int CardHeight = 640;
     private const int ImageSize = 200;
@@ -21,6 +24,10 @@ public class CardGenerator
                                   Color? titleColor = null, Color? subjectColor = null, Color? informationColor = null,
                                   Color? backgColor = null, Color? statColor = null)
     {
+        PrivateFontCollection privateFonts = new PrivateFontCollection();
+
+        privateFonts.AddFontFile(@"wwwroot/Fonts/ARIAL.TTF");
+
         Color badgeTextColor = backgColor ?? Color.White;
         Bitmap bitmap = new Bitmap(CardWidth, CardHeight);
 
@@ -51,7 +58,7 @@ public class CardGenerator
                 DrawRoundedRectangle(graphics, new SolidBrush(Color.DarkOrange), ImageMarg, ImageMarg + 35, ImageSize, ImageSize, 25);
 
                 // متن "image" در وسط
-                using (Font font = new Font("Arial", 24, FontStyle.Bold))
+                using (Font font = new Font(privateFonts.Families[0], 24, FontStyle.Bold))
                 using (Brush brush = new SolidBrush(Color.White))
                 {
                     string text = "Point_Hup";
@@ -63,11 +70,11 @@ public class CardGenerator
             }
 
             // فونت‌های پیش‌فرض اگر تعیین نشده باشند - اندازه‌های بزرگ‌تر برای تصویر 1280x640
-            Font defaultTitleFont = new Font("Arial", 48, FontStyle.Bold);
-            Font defaultSubjectFont = new Font("Arial", 36, FontStyle.Regular);
-            Font defaultInformationFont = new Font("Arial", 28, FontStyle.Regular);
-            Font statsFont = new Font("Arial", 18, FontStyle.Regular);
-            Font badgeFont = new Font("Arial", 36, FontStyle.Regular); // فونت برای متن badge
+            Font defaultTitleFont = new Font(privateFonts.Families[0], 48, FontStyle.Bold);
+            Font defaultSubjectFont = new Font(privateFonts.Families[0], 36, FontStyle.Regular);
+            Font defaultInformationFont = new Font(privateFonts.Families[0], 28, FontStyle.Regular);
+            Font statsFont = new Font(privateFonts.Families[0], 18, FontStyle.Regular);
+            Font badgeFont = new Font(privateFonts.Families[0], 36, FontStyle.Regular); // فونت برای متن badge
 
             // رنگ‌های پیش‌فرض
             Color finalTitleColor = titleColor ?? Color.Black;
@@ -239,6 +246,9 @@ public class CardGenerator
 
     private static void DrawIssueIcon(Graphics graphics, float x, float y, int size, Color color)
     {
+        PrivateFontCollection privateFonts = new PrivateFontCollection();
+        privateFonts.AddFontFile("wwwroot/Fonts/ARIAL.TTF");
+
         // رسم آیکون مسئله (دایره با علامت تعجب)
         using (Pen pen = new Pen(color, 2))
         using (Brush brush = new SolidBrush(color))
@@ -251,7 +261,7 @@ public class CardGenerator
             graphics.DrawEllipse(pen, x + (size - circleSize) / 2, y + (size - circleSize) / 2, circleSize, circleSize);
 
             // علامت تعجب
-            using (Font font = new Font("Arial", size * 0.5f, FontStyle.Bold))
+            using (Font font = new Font(privateFonts.Families[0], size * 0.5f, FontStyle.Bold))
             {
                 string exclamation = "!";
                 SizeF textSize = graphics.MeasureString(exclamation, font);

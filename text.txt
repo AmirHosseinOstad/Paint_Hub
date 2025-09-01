@@ -1,0 +1,6 @@
+
+System.IO.DirectoryNotFoundException: The directory D:\My World\Elesoft\Paint_Hub_web\Paint_Hub_web\wwwroot\ImagesResult of the filename D:\My World\Elesoft\Paint_Hub_web\Paint_Hub_web\wwwroot\ImagesResult\Card-a8ebca398fbe41fbac009584887649d2.png does not exist.
+   at System.Drawing.Image.ThrowIfDirectoryDoesntExist(String filename)
+   at System.Drawing.Image.Save(String filename, Guid encoder, EncoderParameters encoderParams)
+   at System.Drawing.Image.Save(String filename, ImageFormat format)
+   at Paint_Hub_web.Controllers.HomeController.Manual(String repoUrl, String bgColor, String titleColor, String ownerColor, String descColor, String statColor) in D:\My World\Elesoft\Paint_Hub_web\Paint_Hub_web\Controllers\HomeController.cs:line 100

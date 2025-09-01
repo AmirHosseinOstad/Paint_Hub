@@ -95,7 +95,7 @@ namespace Paint_Hub_web.Controllers
                 ViewBag.ResultImage = $"{RandomName}.png";
             }
 
-            System.IO.File.Delete($"wwwroot/Images/{RandomName}.png");
+            //System.IO.File.Delete($"wwwroot/Images/{RandomName}.png");
 
             return View("Result");
         }

@@ -6,7 +6,7 @@
 }
 
 body {
-    font-family: 'Vazirmatn', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Vazirmatn';
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -313,23 +313,10 @@ input[type="color"] {
     font-size: 1.3em;
     color: white;
     margin-top: 30px;
+    background-color: black;
+    border-radius: 20px;
+    font-family: 'Vazirmatn';
 }
-
-    .generate-btn.green {
-        background: linear-gradient(45deg, #4CAF50, #45a049);
-    }
-
-        .generate-btn.green:hover {
-            box-shadow: 0 10px 25px rgba(76, 175, 80, 0.3);
-        }
-
-    .generate-btn.blue {
-        background: linear-gradient(45deg, #2196F3, #1976D2);
-    }
-
-        .generate-btn.blue:hover {
-            box-shadow: 0 10px 25px rgba(33, 150, 243, 0.3);
-        }
 
 /* Action Buttons */
 .action-buttons {
