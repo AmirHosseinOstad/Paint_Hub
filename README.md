@@ -1,6 +1,11 @@
 # PaintHub  
 
 🎨 **GitHub Repository Social Media Banner Generator**  
+![C#](https://img.shields.io/badge/language-C%23-239120?style=for-the-badge&logo=c-sharp&logoColor=white)
+![.NET Core](https://img.shields.io/badge/.NET_Core-5C2D91?style=for-the-badge&logo=dotnet&logoColor=white)
+![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)
+![Bitmap](https://img.shields.io/badge/Bitmap-Library-blue?style=for-the-badge)
+
 ## Use without clone
 The PaintHub is online as an asp.net core mvc (Web_Version branch) on the host and can be used from https://painthub.elesoft.ir/
 <br/>
