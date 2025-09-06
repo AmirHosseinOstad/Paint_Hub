@@ -11,9 +11,9 @@ using static System.Net.Mime.MediaTypeNames;
 
 ;
 
-using (Bitmap card = LogoGenerator.CreateLogo("", "aint", "P", "17",
-                                   "", "ub", "H", "1",
-                                   "am", "r", "I"))
+using (Bitmap card = LogoGenerator.CreateLogo("Visu", "", "Al", "",
+                                   "", "tudio", "S", "",
+                                   "M", "crosoft", "I"))
 {
     Console.WriteLine("Start image creation...");
     card.Save($"Card-BreakingBad.png", ImageFormat.Png);
