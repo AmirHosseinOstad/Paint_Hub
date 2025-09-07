@@ -5,21 +5,10 @@ using System.Runtime;
 using System.Security.AccessControl;
 using System.Text.Json;
 using System.Xml.Linq;
+using Paint_Hub;
 using static System.Net.Mime.MediaTypeNames;
 
 #pragma warning disable
-
-;
-
-using (Bitmap card = LogoGenerator.CreateLogo("Visu", "", "Al", "",
-                                   "", "tudio", "S", "",
-                                   "M", "crosoft", "I"))
-{
-    Console.WriteLine("Start image creation...");
-    card.Save($"Card-BreakingBad.png", ImageFormat.Png);
-
-    Console.WriteLine("The card image was saved at the following address:");
-}
 
 Console.Write("welcome to ");
 Console.ForegroundColor = ConsoleColor.DarkYellow;
@@ -33,6 +22,8 @@ Console.WriteLine(">> Press 'b' to Breaking Bad mode,");
 Console.WriteLine(">> Press 'm' to manual mode,");
 Console.WriteLine(">> Press 'h' to get help.");
 Console.WriteLine();
+
+GetAtomicData GetAtomicData = new GetAtomicData();
 
 for (; ; )
 {
@@ -106,24 +97,31 @@ for (; ; )
         }
         else
         {
+            AtomicData repoNameData = GetAtomicData.GetData(listInfo.Name, true);
+            AtomicData ownerNameData = GetAtomicData.GetData(listInfo.OwnerName, false);
+
             Console.WriteLine("Data processing and card making...");
 
-            string ImageAvatar = SaveImage(listInfo.AvatarUrl, "Avatar.png");
-            using (Bitmap card = CardGenerator.CreateCard(
-                ImageAvatar,
-                listInfo.Name,
-                listInfo.OwnerName,
-                listInfo.Description,
-                listInfo.Stars,
-                listInfo.Forks,
-                listInfo.Issues,
-                listInfo.Language))
+            string binPath = AppContext.BaseDirectory;
+
+            using (Bitmap card = LogoGenerator.CreateLogo(
+                repoNameData.Part1Text[0..repoNameData.Part1Index.StartIndex],
+                repoNameData.Part1Text[(repoNameData.Part1Index.EndIndex + 1)..repoNameData.Part1Text.Length],
+                repoNameData.Part1Symbol,
+                repoNameData.Part1Number,
+                repoNameData.Part2Text[0..repoNameData.Part2Index.StartIndex],
+                repoNameData.Part2Text[(repoNameData.Part2Index.EndIndex + 1)..repoNameData.Part2Text.Length],
+                repoNameData.Part2Symbol,
+                repoNameData.Part2Number,
+                ownerNameData.Part1Text[0..ownerNameData.Part1Index.StartIndex],
+                ownerNameData.Part1Text[(ownerNameData.Part1Index.EndIndex)..ownerNameData.Part1Text.Length],
+                ownerNameData.Part1Symbol))
             {
                 Console.WriteLine("Start image creation...");
-                card.Save($"Card-{listInfo.Name}.png", ImageFormat.Png);
+                card.Save($"BrBad-{listInfo.Name}.png", ImageFormat.Png);
 
                 Console.WriteLine("The card image was saved at the following address:");
-                Console.WriteLine(ImageAvatar.Replace("Avatar.png", $"Card-{listInfo.Name}.png"));
+                Console.WriteLine(binPath + $"BrBad-{listInfo.Name}.png");
             }
         }
     }
