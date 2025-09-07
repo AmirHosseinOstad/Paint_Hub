@@ -12,7 +12,7 @@ The PaintHub is online as an asp.net core mvc (Web_Version branch) on the host a
 On the web page, you can create a banner for your GitHub repo with a graphical interface.
 
 ## Latest Update:
--Added Breaking Bad mode (Ability to create a banner for the repo in the style of the series logo)
+- Added Breaking Bad mode (Ability to create a banner for the repo in the style of the series logo)
 - Improved banner design  
 - Added programming language label  
 - Added icon  
