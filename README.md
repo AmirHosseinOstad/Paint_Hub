@@ -75,7 +75,7 @@ A PNG file named `Card-[repo-name].png` will be saved in the project folder.
 - Color codes must be in HEX format (without #)  
 
 ## Example Banner Generated with PaintHub
-<img width="1280" height="640" alt="image" src="https://github.com/user-attachments/assets/d4081630-440a-4162-a7cf-1064d89ff6ef" />
+<img width="1280" height="640" alt="BrBad-monaco-editor" src="https://github.com/user-attachments/assets/724fa08c-4285-40b2-9040-37469801b747" />
 <img width="1280" height="640" alt="Card-monaco-editor" src="https://github.com/user-attachments/assets/e36a6646-9c1b-42c5-a908-2fcd7ee8fecb" />
 <img width="1280" height="640" alt="Card-monaco-editor" src="https://github.com/user-attachments/assets/f65513d7-f126-46a9-ac38-072c9421b69a" />
 
