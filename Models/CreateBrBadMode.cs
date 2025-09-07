@@ -25,7 +25,7 @@ public class LogoGenerator
         Bitmap bitmap = new Bitmap(LogoWidth, LogoHeight);
         using (Graphics graphics = Graphics.FromImage(bitmap))
         {
-            string customFontPath = "wwwroot/Fonts/Butler_Regular.otf";
+            string customFontPath = "Butler_Regular.otf";
             // تنظیمات کیفیت
             graphics.SmoothingMode = SmoothingMode.AntiAlias;
             graphics.TextRenderingHint = TextRenderingHint.AntiAlias;
@@ -71,17 +71,12 @@ public class LogoGenerator
             SizeF bottomLeftSize = string.IsNullOrEmpty(bottomLeftText) ? SizeF.Empty : graphics.MeasureString(bottomLeftText, largeFont);
             SizeF bottomRightSize = string.IsNullOrEmpty(bottomRightText) ? SizeF.Empty : graphics.MeasureString(bottomRightText, largeFont);
 
-            // محاسبه عرض کل لوگو اصلی (متن چپ + فاصله + مربع + مربع + فاصله + متن راست)
-            float topRowWidth = (topLeftSize.Width > 0 ? topLeftSize.Width + 5 : 0) +
-                               SquareSize +
-                               (topRightSize.Width > 0 ? 5 + topRightSize.Width : 0);
-
-            float bottomRowWidth = (bottomLeftSize.Width > 0 ? bottomLeftSize.Width + 5 : 0) +
-                                  SquareSize +
-                                  (bottomRightSize.Width > 0 ? 5 + bottomRightSize.Width : 0);
+            //تعین موقعیت شروع دو شکل:
+            float rightStartLogo = (float)Math.MaxMagnitude(topLeftSize.Width + 120, bottomLeftSize.Width);
+            float leftEndLogo = (float)Math.MaxMagnitude(bottomRightSize.Width + 120, topRightSize.Width);
 
             // تعیین موقعیت شروع لوگو اصلی - فقط X وسط چین
-            float logoStartX = centerX - topRowWidth;
+            float logoStartX = centerX - ((leftEndLogo + rightStartLogo) / 2f);
             float logoStartY = 150; // موقعیت ثابت Y
 
             // تعیین موقعیت مربع بالا
