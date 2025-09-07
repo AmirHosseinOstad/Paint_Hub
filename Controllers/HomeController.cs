@@ -5,6 +5,7 @@ using System.Net;
 using System.Text.Json;
 using Microsoft.AspNetCore.Mvc;
 using Paint_Hub_web.Models;
+using System.Security.AccessControl;
 
 namespace Paint_Hub_web.Controllers
 {
@@ -31,30 +32,38 @@ namespace Paint_Hub_web.Controllers
         [HttpPost]
         public IActionResult Auto(string repoUrl)
         {
-
-            string RandomName = Guid.NewGuid().ToString().Replace("-", "");
-
-            var listInfo = GetRepoInfo(repoUrl);
-
-            string ImageAvatar = SaveImage(listInfo.AvatarUrl, $"{RandomName}.png");
-            using (Bitmap card = CardGenerator.CreateCard(
-            ImageAvatar,
-            listInfo.Name,
-                listInfo.OwnerName,
-                listInfo.Description,
-                listInfo.Stars,
-                listInfo.Forks,
-                listInfo.Issues,
-                listInfo.Language))
+            try
             {
-                card.Save($"wwwroot/ImagesResult/Card-{RandomName}.png", ImageFormat.Png);
+                string RandomName = Guid.NewGuid().ToString().Replace("-", "");
 
-                ViewBag.ResultImage = $"{RandomName}.png";
+                var listInfo = GetRepoInfo(repoUrl);
+
+                string ImageAvatar = SaveImage(listInfo.AvatarUrl, $"{RandomName}.png");
+                using (Bitmap card = CardGenerator.CreateCard(
+                ImageAvatar,
+                listInfo.Name,
+                    listInfo.OwnerName,
+                    listInfo.Description,
+                    listInfo.Stars,
+                    listInfo.Forks,
+                    listInfo.Issues,
+                    listInfo.Language))
+                {
+                    card.Save($"wwwroot/ImagesResult/Card-{RandomName}.png", ImageFormat.Png);
+
+                    ViewBag.ResultImage = $"{RandomName}.png";
+                }
+
+                System.IO.File.Delete($"wwwroot/Images/{RandomName}.png");
+
+                return View("Result");
             }
+            catch (Exception ex)
+            {
+                System.IO.File.AppendAllText("wwwroot/Exception/File.txt", $">>> {ex.Message}, {DateTime.Now} \n\n");
 
-            System.IO.File.Delete($"wwwroot/Images/{RandomName}.png");
-
-            return View("Result");
+                return Content(ex.Message);
+            }
         }
 
         public IActionResult Breaking_Bad()
@@ -65,33 +74,41 @@ namespace Paint_Hub_web.Controllers
         [HttpPost]
         public IActionResult Breaking_Bad(string repoUrl)
         {
-
-            string RandomName = Guid.NewGuid().ToString().Replace("-", "");
-
-            var listInfo = GetRepoInfo(repoUrl);
-
-            AtomicData repoNameData = GetAtomicData.GetData(listInfo.Name, true);
-            AtomicData ownerNameData = GetAtomicData.GetData(listInfo.OwnerName, false);
-
-            using (Bitmap card = LogoGenerator.CreateLogo(
-                repoNameData.Part1Text[0..repoNameData.Part1Index.StartIndex],
-                repoNameData.Part1Text[(repoNameData.Part1Index.EndIndex + 1)..repoNameData.Part1Text.Length],
-                repoNameData.Part1Symbol,
-                repoNameData.Part1Number,
-                repoNameData.Part2Text[0..repoNameData.Part2Index.StartIndex],
-                repoNameData.Part2Text[(repoNameData.Part2Index.EndIndex + 1)..repoNameData.Part2Text.Length],
-                repoNameData.Part2Symbol,
-                repoNameData.Part2Number,
-                ownerNameData.Part1Text[0..ownerNameData.Part1Index.StartIndex],
-                ownerNameData.Part1Text[(ownerNameData.Part1Index.EndIndex + 1)..ownerNameData.Part1Text.Length],
-                ownerNameData.Part1Symbol))
+            try
             {
-                card.Save($"wwwroot/ImagesResult/Card-{RandomName}.png", ImageFormat.Png);
+                string RandomName = Guid.NewGuid().ToString().Replace("-", "");
 
-                ViewBag.ResultImage = $"{RandomName}.png";
+                var listInfo = GetRepoInfo(repoUrl);
+
+                AtomicData repoNameData = GetAtomicData.GetData(listInfo.Name, true);
+                AtomicData ownerNameData = GetAtomicData.GetData(listInfo.OwnerName, false);
+
+                using (Bitmap card = LogoGenerator.CreateLogo(
+                    repoNameData.Part1Text[0..repoNameData.Part1Index.StartIndex],
+                    repoNameData.Part1Text[(repoNameData.Part1Index.EndIndex + 1)..repoNameData.Part1Text.Length],
+                    repoNameData.Part1Symbol,
+                    repoNameData.Part1Number,
+                    repoNameData.Part2Text[0..repoNameData.Part2Index.StartIndex],
+                    repoNameData.Part2Text[(repoNameData.Part2Index.EndIndex + 1)..repoNameData.Part2Text.Length],
+                    repoNameData.Part2Symbol,
+                    repoNameData.Part2Number,
+                    ownerNameData.Part1Text[0..ownerNameData.Part1Index.StartIndex],
+                    ownerNameData.Part1Text[(ownerNameData.Part1Index.EndIndex + 1)..ownerNameData.Part1Text.Length],
+                    ownerNameData.Part1Symbol))
+                {
+                    card.Save($"wwwroot/ImagesResult/Card-{RandomName}.png", ImageFormat.Png);
+
+                    ViewBag.ResultImage = $"{RandomName}.png";
+                }
+
+                return View("Result");
             }
+            catch (Exception ex)
+            {
+                System.IO.File.AppendAllText("wwwroot/Exception/File.txt", $">>> {ex.Message}, {DateTime.Now} \n\n");
 
-            return View("Result");
+                return Content(ex.Message);
+            }
         }
 
         public IActionResult Manual()
@@ -107,35 +124,43 @@ namespace Paint_Hub_web.Controllers
             string descColor,
             string statColor)
         {
-
-            string RandomName = Guid.NewGuid().ToString().Replace("-", "");
-
-            var listInfo = GetRepoInfo(repoUrl);
-
-            string ImageAvatar = SaveImage(listInfo.AvatarUrl, $"{RandomName}.png");
-            using (Bitmap card = CardGenerator.CreateCard(
-            ImageAvatar,
-            listInfo.Name,
-                listInfo.OwnerName,
-                listInfo.Description,
-                listInfo.Stars,
-                listInfo.Forks,
-                listInfo.Issues,
-                listInfo.Language,
-                ColorTranslator.FromHtml(titleColor),
-                ColorTranslator.FromHtml(ownerColor),
-                ColorTranslator.FromHtml(descColor),
-                ColorTranslator.FromHtml(bgColor),
-                ColorTranslator.FromHtml(statColor)))
+            try
             {
-                card.Save($"wwwroot/ImagesResult/Card-{RandomName}.png", ImageFormat.Png);
+                string RandomName = Guid.NewGuid().ToString().Replace("-", "");
 
-                ViewBag.ResultImage = $"{RandomName}.png";
+                var listInfo = GetRepoInfo(repoUrl);
+
+                string ImageAvatar = SaveImage(listInfo.AvatarUrl, $"{RandomName}.png");
+                using (Bitmap card = CardGenerator.CreateCard(
+                ImageAvatar,
+                listInfo.Name,
+                    listInfo.OwnerName,
+                    listInfo.Description,
+                    listInfo.Stars,
+                    listInfo.Forks,
+                    listInfo.Issues,
+                    listInfo.Language,
+                    ColorTranslator.FromHtml(titleColor),
+                    ColorTranslator.FromHtml(ownerColor),
+                    ColorTranslator.FromHtml(descColor),
+                    ColorTranslator.FromHtml(bgColor),
+                    ColorTranslator.FromHtml(statColor)))
+                {
+                    card.Save($"wwwroot/ImagesResult/Card-{RandomName}.png", ImageFormat.Png);
+
+                    ViewBag.ResultImage = $"{RandomName}.png";
+                }
+
+                //System.IO.File.Delete($"wwwroot/Images/{RandomName}.png");
+
+                return View("Result");
             }
+            catch (Exception ex)
+            {
+                System.IO.File.AppendAllText("wwwroot/Exception/File.txt", $">>> {ex.Message}, {DateTime.Now} \n\n");
 
-            //System.IO.File.Delete($"wwwroot/Images/{RandomName}.png");
-
-            return View("Result");
+                return Content(ex.Message);
+            }
         }
 
         public IActionResult Result()
