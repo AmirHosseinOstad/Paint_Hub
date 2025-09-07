@@ -1,0 +1,8 @@
+# Ignore image files
+*.jpg
+*.jpeg
+*.png
+
+# Ignore thumbnails
+*.thumb.jpg
+*.thumb.png
