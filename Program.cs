@@ -114,7 +114,7 @@ for (; ; )
                 repoNameData.Part2Symbol,
                 repoNameData.Part2Number,
                 ownerNameData.Part1Text[0..ownerNameData.Part1Index.StartIndex],
-                ownerNameData.Part1Text[(ownerNameData.Part1Index.EndIndex)..ownerNameData.Part1Text.Length],
+                ownerNameData.Part1Text[(ownerNameData.Part1Index.EndIndex + 1)..ownerNameData.Part1Text.Length],
                 ownerNameData.Part1Symbol))
             {
                 Console.WriteLine("Start image creation...");

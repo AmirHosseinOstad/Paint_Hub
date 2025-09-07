@@ -14,11 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Paint_Hub")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-<<<<<<< HEAD
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+18319e5cc19ca5203d6c5798ed634051d3c01808")]
-=======
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+afeb4276f7660fc3b82334503f83c346d26baf64")]
->>>>>>> master
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a3413e4fb0abb6f1c9861ad68af58105cfd5b99f")]
 [assembly: System.Reflection.AssemblyProductAttribute("Paint_Hub")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Paint_Hub")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
