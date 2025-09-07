@@ -1,0 +1,29 @@
+﻿<a href="index.html" class="back-btn">← بازگشت</a>
+
+<div class="container">
+    <div class="header">
+        <div class="logo">🤖</div>
+        <h1>حالت بریکینگ بد</h1>
+        <p class="subtitle">تولید تصویر طبق لوگو معروف</p>
+    </div>
+
+    <form id="autoForm" action="/Home/Breaking_Bad" method="post">
+        <div class="form-group">
+            <label for="repoUrl">آدرس مخزن GitHub:</label>
+            <input type="text"
+                   id="repoUrl"
+                   name="repoUrl"
+                   placeholder="https://github.com/username/repository"
+                   required>
+            <div class="example">مثال: https://github.com/microsoft/vscode</div>
+        </div>
+
+        <button type="submit" class="generate-btn">
+            🎨 ایجاد بنر
+        </button>
+
+        <div class="info-box">
+            <strong>نکته:</strong> این حالت هنوز در مرحله آزمایشی بوده و ممکن است خطا داشته باشد.
+        </div>
+    </form>
+</div>

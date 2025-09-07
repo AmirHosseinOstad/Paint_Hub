@@ -10,6 +10,7 @@ namespace Paint_Hub_web.Controllers
 {
     public class HomeController : Controller
     {
+        GetAtomicData GetAtomicData = new GetAtomicData();
         private readonly ILogger<HomeController> _logger;
 
         public HomeController(ILogger<HomeController> logger)
@@ -52,6 +53,43 @@ namespace Paint_Hub_web.Controllers
             }
 
             System.IO.File.Delete($"wwwroot/Images/{RandomName}.png");
+
+            return View("Result");
+        }
+
+        public IActionResult Breaking_Bad()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult Breaking_Bad(string repoUrl)
+        {
+
+            string RandomName = Guid.NewGuid().ToString().Replace("-", "");
+
+            var listInfo = GetRepoInfo(repoUrl);
+
+            AtomicData repoNameData = GetAtomicData.GetData(listInfo.Name, true);
+            AtomicData ownerNameData = GetAtomicData.GetData(listInfo.OwnerName, false);
+
+            using (Bitmap card = LogoGenerator.CreateLogo(
+                repoNameData.Part1Text[0..repoNameData.Part1Index.StartIndex],
+                repoNameData.Part1Text[(repoNameData.Part1Index.EndIndex + 1)..repoNameData.Part1Text.Length],
+                repoNameData.Part1Symbol,
+                repoNameData.Part1Number,
+                repoNameData.Part2Text[0..repoNameData.Part2Index.StartIndex],
+                repoNameData.Part2Text[(repoNameData.Part2Index.EndIndex + 1)..repoNameData.Part2Text.Length],
+                repoNameData.Part2Symbol,
+                repoNameData.Part2Number,
+                ownerNameData.Part1Text[0..ownerNameData.Part1Index.StartIndex],
+                ownerNameData.Part1Text[(ownerNameData.Part1Index.EndIndex + 1)..ownerNameData.Part1Text.Length],
+                ownerNameData.Part1Symbol))
+            {
+                card.Save($"wwwroot/ImagesResult/Card-{RandomName}.png", ImageFormat.Png);
+
+                ViewBag.ResultImage = $"{RandomName}.png";
+            }
 
             return View("Result");
         }
