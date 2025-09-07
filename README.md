@@ -12,6 +12,7 @@ The PaintHub is online as an asp.net core mvc (Web_Version branch) on the host a
 On the web page, you can create a banner for your GitHub repo with a graphical interface.
 
 ## Latest Update:
+-Added Breaking Bad mode (Ability to create a banner for the repo in the style of the series logo)
 - Improved banner design  
 - Added programming language label  
 - Added icon  
@@ -32,6 +33,13 @@ A console tool for generating beautiful banners from GitHub repositories that ca
 >>> a
 Enter the GitHub repository address : https://github.com/username/repository
 ```
+
+### Breaking Bad Mode
+```
+>>> b
+Enter the GitHub repository address : https://github.com/username/repository
+```
+
 
 ### Manual Mode
 ```
@@ -67,8 +75,10 @@ A PNG file named `Card-[repo-name].png` will be saved in the project folder.
 - Color codes must be in HEX format (without #)  
 
 ## Example Banner Generated with PaintHub
+<img width="1280" height="640" alt="image" src="https://github.com/user-attachments/assets/d4081630-440a-4162-a7cf-1064d89ff6ef" />
 <img width="1280" height="640" alt="Card-monaco-editor" src="https://github.com/user-attachments/assets/e36a6646-9c1b-42c5-a908-2fcd7ee8fecb" />
 <img width="1280" height="640" alt="Card-monaco-editor" src="https://github.com/user-attachments/assets/f65513d7-f126-46a9-ac38-072c9421b69a" />
+
 
 ---
 *Built with ❤️ for the GitHub community*  
