@@ -1,0 +1,13 @@
+## User-specific files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.png
+
+## Visual Studio
+.vs/
+
+## NuGet
+packages/
+*.nupkg

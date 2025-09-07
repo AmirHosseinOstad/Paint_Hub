@@ -5,6 +5,7 @@ using System.Runtime;
 using System.Security.AccessControl;
 using System.Text.Json;
 using System.Xml.Linq;
+using Paint_Hub;
 using static System.Net.Mime.MediaTypeNames;
 
 #pragma warning disable
@@ -17,9 +18,12 @@ Console.WriteLine("Hub ...");
 
 Console.ForegroundColor = ConsoleColor.White;
 Console.WriteLine(">> Press 'a' to Automatic mode,");
+Console.WriteLine(">> Press 'b' to Breaking Bad mode,");
 Console.WriteLine(">> Press 'm' to manual mode,");
 Console.WriteLine(">> Press 'h' to get help.");
 Console.WriteLine();
+
+GetAtomicData GetAtomicData = new GetAtomicData();
 
 for (; ; )
 {
@@ -69,6 +73,55 @@ for (; ; )
 
                 Console.WriteLine("The card image was saved at the following address:");
                 Console.WriteLine(ImageAvatar.Replace("Avatar.png", $"Card-{listInfo.Name}.png"));
+            }
+        }
+    }
+    else if (KeyChar == 'b')
+    {
+        Console.ForegroundColor = ConsoleColor.White;
+        Console.WriteLine("Breaking Bad mode");
+        Console.Write("Enter the GitHub repository address : ");
+        Console.ForegroundColor = ConsoleColor.DarkYellow;
+
+        string RepoAddress = Console.ReadLine().ToString();
+
+        Console.WriteLine("Get repo information...");
+
+        var listInfo = GetRepoInfo(RepoAddress);
+
+        if (!String.IsNullOrEmpty(listInfo.ErrorMessage))
+        {
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine("Error : ");
+            Console.WriteLine(listInfo.ErrorMessage);
+        }
+        else
+        {
+            AtomicData repoNameData = GetAtomicData.GetData(listInfo.Name, true);
+            AtomicData ownerNameData = GetAtomicData.GetData(listInfo.OwnerName, false);
+
+            Console.WriteLine("Data processing and card making...");
+
+            string binPath = AppContext.BaseDirectory;
+
+            using (Bitmap card = LogoGenerator.CreateLogo(
+                repoNameData.Part1Text[0..repoNameData.Part1Index.StartIndex],
+                repoNameData.Part1Text[(repoNameData.Part1Index.EndIndex + 1)..repoNameData.Part1Text.Length],
+                repoNameData.Part1Symbol,
+                repoNameData.Part1Number,
+                repoNameData.Part2Text[0..repoNameData.Part2Index.StartIndex],
+                repoNameData.Part2Text[(repoNameData.Part2Index.EndIndex + 1)..repoNameData.Part2Text.Length],
+                repoNameData.Part2Symbol,
+                repoNameData.Part2Number,
+                ownerNameData.Part1Text[0..ownerNameData.Part1Index.StartIndex],
+                ownerNameData.Part1Text[(ownerNameData.Part1Index.EndIndex + 1)..ownerNameData.Part1Text.Length],
+                ownerNameData.Part1Symbol))
+            {
+                Console.WriteLine("Start image creation...");
+                card.Save($"BrBad-{listInfo.Name}.png", ImageFormat.Png);
+
+                Console.WriteLine("The card image was saved at the following address:");
+                Console.WriteLine(binPath + $"BrBad-{listInfo.Name}.png");
             }
         }
     }
