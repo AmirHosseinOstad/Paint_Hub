@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Paint_Hub_web")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+968ab59d0086dc4a9b1621bae592551d3fd6ed28")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3cddef07263adf3c150e075c9ce80c492edbc5e7")]
 [assembly: System.Reflection.AssemblyProductAttribute("Paint_Hub_web")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Paint_Hub_web")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

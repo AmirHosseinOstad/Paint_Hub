@@ -25,7 +25,7 @@ public class LogoGenerator
         Bitmap bitmap = new Bitmap(LogoWidth, LogoHeight);
         using (Graphics graphics = Graphics.FromImage(bitmap))
         {
-            string customFontPath = "Butler_Regular.otf";
+            string customFontPath = "wwwroot/Fonts/Butler_Regular.otf";
             // تنظیمات کیفیت
             graphics.SmoothingMode = SmoothingMode.AntiAlias;
             graphics.TextRenderingHint = TextRenderingHint.AntiAlias;
